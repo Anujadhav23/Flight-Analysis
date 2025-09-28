@@ -1,0 +1,14 @@
+### Route wise Flight analysis - Busiest Routes by Total Passengers
+SELECT 
+    f.ORIGIN_AIRPORT_ID,
+    f.DEST_AIRPORT_ID,
+    a1.CITY_NAME AS ORIGIN_CITY,
+    a2.CITY_NAME AS DEST_CITY,
+    SUM(fm.PASSENGERS) AS TOTAL_PASSENGERS
+FROM Flight f
+JOIN Flightmetrics fm ON f.FLIGHT_ID = fm.FLIGHT_ID
+JOIN Airport a1 ON f.ORIGIN_AIRPORT_ID = a1.AIRPORT_ID
+JOIN Airport a2 ON f.DEST_AIRPORT_ID = a2.AIRPORT_ID
+GROUP BY f.ORIGIN_AIRPORT_ID, f.DEST_AIRPORT_ID, a1.CITY_NAME, a2.CITY_NAME -- Including non-aggregated columns in GROUP BY
+ORDER BY TOTAL_PASSENGERS DESC
+limit 10;
