@@ -7,7 +7,7 @@ This project analyzes flight data to explore patterns in passenger traffic, airp
 ---
 
 ## 🗂 Folder Structure
-
+'''
 flight-analysis/
 │
 ├─ sql/
@@ -29,6 +29,7 @@ flight-analysis/
 │
 └─ README.md
 
+'''
 
 ---
 
@@ -42,7 +43,7 @@ flight-analysis/
 
 ## 🏃‍♂️ How to Run
 
-### Step 1 – Create Database and Tables 🏗️
+ Step 1 – Create Database and Tables 🏗️
 ```sql
 db-and-table-create.sql
 
