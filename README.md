@@ -1,124 +1,119 @@
-✈️ Flight Analysis Project
-📄 Project Description
+# ✈️ Flight Analysis Project
 
-This project analyzes flight data to explore patterns in passenger traffic, airport performance, flight frequency, and the relationship between city population and air traffic. The dataset includes airlines, airports, flights, and metrics.
+## 📄 Project Description
+This project analyzes flight data to explore patterns in passenger traffic, airport performance, flight frequency, and the relationship between city population and air traffic.  
+**💻 Tech Stack:** SQL (MySQL 8.0+)
 
-💻 Tech Stack: SQL (MySQL 8.0+)
+---
 
-🗂 Folder Structure
+## 🗂 Folder Structure
+
 flight-analysis/
 │
 ├─ sql/
-│  ├─ db-and-table-create.sql               # Create database and tables
-│  ├─ data-insert.sql                       # Insert data into tables from MetaData
-│  ├─ data-cleaning.sql                     # Clean and prepare the data
-│  ├─ city-pop-insert.sql                   # City table cleaning & population integration
-│  ├─ analysis-queries.sql                  # Flight frequency & busiest routes
-│  ├─ city-airport-performance.sql          # Origin & destination city performance
-│  ├─ high-traffic-corridors.sql            # High-traffic flight corridors
-│  ├─ total-pass-served-over-time.sql       # Passengers served over time
-│  ├─ pop-vs-traffic.sql                    # Population vs. air traffic analysis (part 1)
-│  ├─ pop-vs-traffic-part2.sql              # Population vs. air traffic analysis (part 2)
-│  └─ VIEW.sql                              # Final aggregated views (run last)
+│ ├─ db-and-table-create.sql
+│ ├─ data-insert.sql
+│ ├─ data-cleaning.sql
+│ ├─ city-pop-insert.sql
+│ ├─ analysis-queries.sql
+│ ├─ city-airport-performance.sql
+│ ├─ high-traffic-corridors.sql
+│ ├─ total-pass-served-over-time.sql
+│ ├─ pop-vs-traffic.sql
+│ ├─ pop-vs-traffic-part2.sql
+│ └─ VIEW.sql
+│
+├─ data/
+│ ├─ meta_data.csv
+│ └─ all_city_pop.csv
+│
+└─ README.md
 
-⚡ Requirements
 
-MySQL 8.0+ installed
+---
 
-MySQL Workbench or other MySQL client
+## ⚡ Requirements
+- MySQL 8.0+ installed  
+- MySQL Workbench or any MySQL client  
+- **MetaData.csv** pre-loaded into `MetaData` table  
+- Optional: `all_city_pop` table for population analysis  
 
-MetaData.csv pre-loaded into the MetaData table
+---
 
-Optional: all_city_pop table for population analysis
+## 🏃‍♂️ How to Run
 
-🏃‍♂️ How to Run
-Step 1 – Create Database and Tables 🏗️
--- Run first
+### Step 1 – Create Database and Tables 🏗️
+```sql
 db-and-table-create.sql
 
 Step 2 – Import MetaData CSV & Insert Data 📥
 
-Before running data-insert.sql, import MetaData.csv into the MetaData table.
+Open MySQL Workbench → Select database → Right-click MetaData → Table Data Import Wizard
 
-Using MySQL Workbench Import Wizard:
+Select MetaData.csv
 
-Open MySQL Workbench → Select your database → Right-click MetaData table → Table Data Import Wizard.
+Ensure columns match
 
-Select your MetaData.csv file.
+Click Next → Finish
 
-Ensure CSV columns match table columns.
-
-Click Next → Finish to load the data.
-
-Once imported, run:
+Then run:
 
 data-insert.sql
 
 Step 3 – Clean and Prepare Data 🧹
+
 data-cleaning.sql
 
-
-Cleans raw data and prepares tables for analysis.
-
 Step 4 – City Table Cleaning & Population Integration 🏙️
+
 city-pop-insert.sql
 
-
-Creates City_New staging table with population from all_city_pop
-
-Cleans city names (removes extra text like state/country)
-
-Updates Airport table for consistency
-
-Renames City_New to City
-
 Step 5 – Flight Frequency & Route Analysis 📈
+
 analysis-queries.sql
 
-
-Busiest routes by total passengers
-
-Flight count for high-traffic corridors
-
 Step 6 – City & Airport Performance 📊
+
 city-airport-performance.sql
 
-
-Passenger totals and flight counts for origin and destination cities
-
 Step 7 – Total Passengers Over Time 🕒
+
 total-pass-served-over-time.sql
 
-
-Summarizes total passengers monthly and yearly
-
 Step 8 – Population vs Traffic Analysis 🧑‍✈️
+
 pop-vs-traffic.sql
 pop-vs-traffic-part2.sql
 
-
-Part 1: Total passengers vs city population
-
-Part 2: Passengers-to-population ratio (origin & destination cities)
-
 Step 9 – Final Views 🏁
+
 VIEW.sql
-
-
-Aggregates final results for reporting
 
 💡 Notes
 
-Always follow the steps in the given order to avoid foreign key or dependency errors.
+Follow steps in order to avoid dependency errors
 
-Each SQL file focuses on one analysis step, keeping the project modular.
+Each SQL file is modular
 
-Use the final VIEW.sql to generate aggregated views for reporting.
+Use VIEW.sql for final reporting
 
 🌟 Tips for Users
 
-Always double-check CSV columns when importing.
+Double-check CSV columns
 
-Make backups of tables if you want to test modifications.
+Make backups if modifying tables
+Use LIMIT in queries for testing large datasets
 
-Use LIMIT in queries if your dataset is very large for testing.
+
+---
+
+### **Step 3 – Save README**
+- Save the file in VS Code (**Ctrl + S**).  
+
+---
+
+### **Step 4 – Commit & Push**
+```bash
+git add README.md
+git commit -m "Add structured README with proper markdown"
+git push origin main
