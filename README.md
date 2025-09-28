@@ -6,10 +6,9 @@ This project analyzes flight data to explore patterns in passenger traffic, airp
 
 ---
 
-## 🗂 Folder Structure
-'''
+🗂 Folder Structure
+---
 flight-analysis/
-│
 ├─ sql/
 │ ├─ db-and-table-create.sql
 │ ├─ data-insert.sql
@@ -22,15 +21,14 @@ flight-analysis/
 │ ├─ pop-vs-traffic.sql
 │ ├─ pop-vs-traffic-part2.sql
 │ └─ VIEW.sql
-│
 ├─ data/
 │ ├─ meta_data.csv
 │ └─ all_city_pop.csv
-│
-└─ README.md
+└─ README.md "
+---
+
 
 '''
-
 ---
 
 ## ⚡ Requirements
