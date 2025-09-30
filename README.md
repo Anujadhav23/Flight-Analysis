@@ -4,31 +4,24 @@
 This project analyzes flight data to explore patterns in passenger traffic, airport performance, flight frequency, and the relationship between city population and air traffic.  
 **💻 Tech Stack:** SQL (MySQL 8.0+)
 
----
-
-🗂 Folder Structure
----
 flight-analysis/
-├─ sql/
-│ ├─ db-and-table-create.sql
-│ ├─ data-insert.sql
-│ ├─ data-cleaning.sql
-│ ├─ city-pop-insert.sql
-│ ├─ analysis-queries.sql
-│ ├─ city-airport-performance.sql
-│ ├─ high-traffic-corridors.sql
-│ ├─ total-pass-served-over-time.sql
-│ ├─ pop-vs-traffic.sql
-│ ├─ pop-vs-traffic-part2.sql
-│ └─ VIEW.sql
-├─ data/
-│ ├─ meta_data.csv
-│ └─ all_city_pop.csv
-└─ README.md "
----
+├── sql/
+│   ├── db-and-table-create.sql
+│   ├── data-insert.sql
+│   ├── data-cleaning.sql
+│   ├── city-pop-insert.sql
+│   ├── analysis-queries.sql
+│   ├── city-airport-performance.sql
+│   ├── high-traffic-corridors.sql
+│   ├── total-pass-served-over-time.sql
+│   ├── pop-vs-traffic.sql
+│   ├── pop-vs-traffic-part2.sql
+│   └── VIEW.sql
+├── data/
+│   ├── meta_data.csv
+│   └── all_city_pop.csv
+└── README.md
 
-
-'''
 ---
 
 ## ⚡ Requirements
