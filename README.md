@@ -4,6 +4,9 @@
 This project analyzes flight data to explore patterns in passenger traffic, airport performance, flight frequency, and the relationship between city population and air traffic.  
 **💻 Tech Stack:** SQL (MySQL 8.0+)
 
+## 📂 Folder Structure
+
+```bash
 flight-analysis/
 ├── sql/
 │   ├── db-and-table-create.sql
@@ -21,6 +24,7 @@ flight-analysis/
 │   ├── meta_data.csv
 │   └── all_city_pop.csv
 └── README.md
+
 
 ---
 
